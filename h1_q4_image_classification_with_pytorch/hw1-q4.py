@@ -270,7 +270,7 @@ def main():
     file_name = '.\q4_1_results\q4_1_loss_' + str(opt.learning_rate) + '_' + str(opt.hidden_sizes) + '_' + str(opt.dropout) + '_' + str(opt.activation) + '_' + str(opt.optimizer) +  '_' + str(opt.layers)
     plot(epochs, train_mean_losses, ylabel='Loss', name=file_name, title='Loss(Epoch)')
     
-    file_name = '.\q4_1_results\q4_1_acc_' + str(opt.learning_rate) + '_' + str(opt.hidden_sizes) + '_' + str(opt.dropout) + '_' + str(opt.activation) + '_' + str(opt.optimizer) + '_' + str(opt.layers) + '_' + str(final_acc) 
+    file_name = '.\q4_1_results\q4_1_acc' + str(opt.learning_rate) + '_' + str(opt.hidden_sizes) + '_' + str(opt.dropout) + '_' + str(opt.activation) + '_' + str(opt.optimizer) + '_' + str(opt.layers) + '_' + str(final_acc) 
     plot(epochs, valid_accs, ylabel='Accuracy', name=file_name, title='Accuracy(Epoch); Final Accuracy=' + str(final_acc))
 #%%
 if __name__ == '__main__':
