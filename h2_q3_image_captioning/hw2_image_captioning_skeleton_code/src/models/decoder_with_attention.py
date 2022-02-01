@@ -23,13 +23,7 @@ class Attention(nn.Module):
         attention_relu = self.relu(attention)
         attention_full_attention = self.full_att(attention_relu)
         attention_weight = self.softmax(attention_full_attention)
-        try:
-            attention_weighted_encoding = torch.sum(attention_weight * encoder_out, dim=1)
-        except:
-            print('Here')
-            print(attention_weight.size())
-            print(encoder_out.size())
-            print(torch.sum(attention_weight * encoder_out, dim=1))
+        attention_weighted_encoding = torch.sum(attention_weight * encoder_out, dim=1)
         return attention_weighted_encoding
 
 
